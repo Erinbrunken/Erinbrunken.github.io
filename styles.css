@@ -1,0 +1,122 @@
+/*
+
+Title: Stylesheet Template
+
+Author: Maurice van Cooten
+
+*/
+
+body {
+	background: #eee;
+	font-size: 16px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	margin:0;
+}
+
+a {
+	color:crimson;
+	text-decoration:none;
+}
+
+a:hover {
+	color:red;
+}
+
+/* Layout
+------------------------------------------*/
+
+header,
+.container,
+footer {
+	margin: 0 auto;
+	width:88%;
+	max-width: 960px;
+    border: 1px solid black;
+}
+
+.wrapper {
+	padding:1em 0;
+	background: #fff;
+}
+
+/*List
+------------------------------------------*/
+
+.list-no-bullets {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-bullet {
+    height:16px;
+    width:16px;
+    margin:0 .2em;
+    display:inline-block;
+    background: url(images/bullet.png);
+}
+
+/*Gallery
+-----------------------------------------*/
+
+.gallery {
+    padding:0;
+}
+
+.gallery li {
+    float:left;
+    list-style:none;
+    margin-right:1em;
+}
+
+.gallery img {
+    border: 3px solid blue;
+}
+
+.gallery img:hover {
+    border: 6px dashed pink;
+    /*transition: all .5s ease-in-out;*/
+}
+
+.gallery li div.item {
+    position: relative;
+    text-align:center;
+}
+
+.gallery li div.item span{
+    position:absolute;
+    padding:.7em 0 1.2em 0;
+    background:rgba(250,250,250,0.8);
+    bottom:-50px;
+    left:0;
+    width:100%;
+    transition: all 1s ease-in-out;
+}
+.gallery li div.item:hover span{
+    bottom:0;
+}
+
+.clearfix:after {
+    content:".";
+    display:block;
+    height: 0;
+    clear:both;
+    visibility:hidden;
+}
+
+@media screen and (min-width: 600px) {
+
+    main {
+        width: 60%;
+        float: left;
+    }
+
+    .secondary {
+        width:36%;
+        float:right;
+        border-radius:5px;
+        padding:.5em;
+        border:1px solid black;
+        background: red;
+        margin:.5em;
+    }
+}
